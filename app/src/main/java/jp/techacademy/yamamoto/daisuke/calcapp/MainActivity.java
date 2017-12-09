@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (TextUtils.isEmpty(text1.getText().toString()) || TextUtils.isEmpty(text2.getText().toString())
-                || text1.getText().toString().equals(".") || text2.getText().toString().equals(".")){
+                || text1.getText().toString().equals("-") || text2.getText().toString().equals("-")
+                || text1.getText().toString().equals(".") || text2.getText().toString().equals(".")
+                || text1.getText().toString().equals("_") || text2.getText().toString().equals("_")
+                || text1.getText().toString().equals("/") || text2.getText().toString().equals("/")){
             text3.setText("数値を入力してください");
             return;
         }
